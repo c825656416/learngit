@@ -1,0 +1,7 @@
+Git is a version control system
+Git is free software
+
+进入一个目录
+git init
+
+
