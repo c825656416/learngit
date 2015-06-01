@@ -60,3 +60,4 @@ git checkout dev
 git branch			列出所有分支和当前分支
 git merger <branch>		合并指定分支到当前分支
 git branch -d <branch>		删除分支
+git push origin :<branch>	删除远程分支，push一个空分支
