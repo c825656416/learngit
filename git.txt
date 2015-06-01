@@ -58,3 +58,5 @@ git checkout -b dev		创建并切换到分支dev，相当与如下两条命令:
 git branch dev
 git checkout dev
 git branch			列出所有分支和当前分支
+git merger <branch>		合并指定分支到当前分支
+git branch -d <branch>		删除分支
