@@ -3,6 +3,7 @@ Git is free software distributed under the GPL
 Git has a mutable index called stage
 Git tracks changes of files
 
+
 进入一个目录
 git init
 
@@ -32,3 +33,10 @@ git reset
 git reset --hard HEAD^		HEAD^表示上一个版本，HEAD^^表示上上个版本，HEAD~100表示上一百个版本
 git reflog			查看历史命令可以查到要回退的版本号
 git reset --hard <版本号>
+
+管理修改:
+git diff HEAD -- <filename>	查看工作区和版本库里面最新版本的区别
+
+撤销修改:
+git checkout -- <filename>	撤销工作区的修改，如果还没有git add
+git reset HEAD <filename>	撤销git add到缓存区的修改，之后在使用git checkout -- <filename>撤销工作区的修改
