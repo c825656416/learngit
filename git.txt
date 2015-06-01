@@ -78,3 +78,9 @@ git pull			试图合并，如果提示 no tracking information
 git branch --set-upstream <branch> origin/<branch>	再pull
 git pull			如果merge出错，手动解决冲突，在提交本地
 git push origin <branch>
+
+创建标签:
+git tag <tagname>		新建一个标签，默认为HEAD，也可以指定一个commit id
+git tag -a <tagname> -m " "	指定标签信息
+git tag				查看所有标签
+git show <tagneme>		查看指定标签信息
