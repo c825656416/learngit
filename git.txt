@@ -84,3 +84,30 @@ git tag <tagname>		新建一个标签，默认为HEAD，也可以指定一个com
 git tag -a <tagname> -m " "	指定标签信息
 git tag				查看所有标签
 git show <tagneme>		查看指定标签信息
+
+管理远程标签:
+git push origin <tagname>	推送一个本地标签
+git push origin --tags		推送全部未推送的标签
+git tag -d <tagname>		删除一个本地标签
+git push tag :refs/tags/<tagname>	删除一个远程标签
+
+自定义Git
+git config --global color.ui true	显示颜色
+
+忽略特定文件:
+编辑 .gitignore 文件，加入仓库
+
+配置别名
+git config --global alias.st status
+git config --global alias.ci commit
+git config --global alias.br branch
+git config --global alias.ubstage "reset HEAD"
+git config --global alias.last "log -1"
+配置文件存放在 .git/config 文件中
+
+搭建Git服务器:
+sudo adduser git
+拷贝需要登陆用户的公钥到 /home/git/.ssh/authorized_keys
+sudo git init --bare simple.git		创建一个空仓库
+sudo chown -R git:git sample.git
+修改 /etc/passwd 下 git 用户的登陆shell 为 git-shell
