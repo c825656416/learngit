@@ -40,3 +40,7 @@ git diff HEAD -- <filename>	查看工作区和版本库里面最新版本的区�
 撤销修改:
 git checkout -- <filename>	撤销工作区的修改，如果还没有git add
 git reset HEAD <filename>	撤销git add到缓存区的修改，之后在使用git checkout -- <filename>撤销工作区的修改
+
+删除文件:
+git rm <filename>
+git commit -m " "
