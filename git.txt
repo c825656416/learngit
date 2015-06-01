@@ -1,5 +1,6 @@
 Git is a distributed version control system
 Git is free software distributed under the GPL
+Git has a mutable index called stage
 
 进入一个目录
 git init
@@ -22,4 +23,11 @@ git 每次修改文件后提交都需要
 git add
 git commit
 
+git log 			查看提交日志
+git log --pretty=oneline	没次提交日志用一行显示
 
+版本回退:
+git reset 
+git reset --hard HEAD^		HEAD^表示上一个版本，HEAD^^表示上上个版本，HEAD~100表示上一百个版本
+git reflog			查看历史命令可以查到要回退的版本号
+git reset --hard <版本号>
