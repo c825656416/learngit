@@ -1,5 +1,5 @@
 Git is a distributed version control system
-Git is free software
+Git is free software distributed under the GPL
 
 进入一个目录
 git init
