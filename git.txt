@@ -60,4 +60,21 @@ git checkout dev
 git branch			列出所有分支和当前分支
 git merger <branch>		合并指定分支到当前分支
 git branch -d <branch>		删除分支
+git branch -D <branch>		强行删除一个没有合并的分支
 git push origin :<branch>	删除远程分支，push一个空分支
+
+git merge --no-ff -m " " <branch>	不使用fast forward模式合并分支
+
+git stash 			暂时隐藏当前分支现场
+git stash list			列出当前分支隐藏的现场
+git stach pop			恢复当前分支现场
+
+git remote -v			查看远程仓库
+
+多人协作:
+git checkout -b <branch> remote/<branch>	在本地创建和远程分支对应的分支
+git push origin <branch>	推送自己修改的分支，如果推送失败
+git pull			试图合并，如果提示 no tracking information
+git branch --set-upstream <branch> origin/<branch>	再pull
+git pull			如果merge出错，手动解决冲突，在提交本地
+git push origin <branch>
