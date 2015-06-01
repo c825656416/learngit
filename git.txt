@@ -2,7 +2,7 @@ Git is a distributed version control system
 Git is free software distributed under the GPL
 Git has a mutable index called stage
 Git tracks changes of files
-
+Creating a new branch is quick
 
 进入一个目录
 git init
@@ -44,3 +44,17 @@ git reset HEAD <filename>	撤销git add到缓存区的修改，之后在使用gi
 删除文件:
 git rm <filename>
 git commit -m " "
+
+关联远程库(github):
+git remote add origin git@github.com:c825656416/learngit.git
+git push -u origin master	第一次推送master分支
+git push origin master		以后推送就不需要加 -u 参数
+
+从远程仓库克隆:
+git clone git@github.com:c825656416/gitskills.git
+
+分支管理:
+git checkout -b dev		创建并切换到分支dev，相当与如下两条命令:
+git branch dev
+git checkout dev
+git branch			列出所有分支和当前分支
